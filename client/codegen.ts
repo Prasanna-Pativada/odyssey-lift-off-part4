@@ -8,10 +8,13 @@ const config: CodegenConfig = {
       preset: "client",
       presetConfig: {
         gqlTagName: "gql"
-      }
+      },
     },
     "./src/__generated__/types.ts": {
-      plugins: ["typescript", "typescript-operations"],
+      plugins: [
+        "typescript",           // generates all schema types
+        "typescript-operations" // generates types for operations
+      ],
     },
   },
 };
